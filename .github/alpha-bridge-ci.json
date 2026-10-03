@@ -7,7 +7,7 @@
     ".github/workflows/alpha-bridge-ci-verify.yml": "f1d0d506e1faf2ef9e00102fbf464fa1a74203bf3463e623621402b9de9e8a45",
     ".github/workflows/check_sphinx_links_scheduled.yml": "319c8f7d3e2f1aa4aed01b5bfa935a7554247e15fab6badf5419e2282cb1e01a"
   },
-  "generator_sha256": "34bc8c1c1eb9b2799c6a06a6f7bd056799561a0342e1ccd9d7ec69c0f000ae82",
+  "generator_sha256": "9fe7eb2612d4c4d8436e5a627541cad32d0dcba429639855b5a0a2af04b9729a",
   "schema": "alpha-bridge/fork-ci",
   "source_branch": "dev",
   "source_commit": "3ada52e0152847c937e168fd9565d95b37582112",
