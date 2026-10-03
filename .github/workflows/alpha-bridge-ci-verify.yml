@@ -1,12 +1,15 @@
-name: Check Sphinx external links and references (scheduled)
+name: AlphaBridge CI input verification
 on:
-  schedule:
-  - cron: 0 5 * * *      # once per day at midnight ET
   workflow_dispatch:
-
+    inputs:
+      probe:
+        type: string
+        required: true
 jobs:
-  call-linkcheck:
-    uses: ./.github/workflows/check_sphinx_links.yml
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo 'Changed inputs reached the consumer'
     needs:
     - alpha_bridge_inputs
     if: ${{ (success()) && needs.alpha_bridge_inputs.outputs.changed == 'true' 
@@ -31,8 +34,8 @@ jobs:
         AB_REPOSITORY: ${{ github.repository }}
         AB_RUN_ID: ${{ github.run_id }}
         AB_HEAD_SHA: ${{ github.sha }}
-        AB_EVENT: ${{ github.event_name }}
-        AB_SCHEDULE: ${{ github.event.schedule || '' }}
+        AB_EVENT: schedule
+        AB_SCHEDULE: alpha-bridge verification
         AB_VARIABLES: ${{ toJSON(vars) }}
         AB_INPUTS: ${{ toJSON(inputs) }}
       shell: bash

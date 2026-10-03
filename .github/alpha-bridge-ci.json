@@ -1,0 +1,20 @@
+{
+  "definition_blob_sha1": {
+    ".github/workflows/alpha-bridge-ci-verify.yml": "0588ba302e7a97a9721ae7494f6b9aca053476b6",
+    ".github/workflows/check_sphinx_links_scheduled.yml": "fa892e2b72aaf94539ee41fd3aa08315126f08ec"
+  },
+  "definition_sha256": {
+    ".github/workflows/alpha-bridge-ci-verify.yml": "d3dacd19a9c94cd86ca5ba24b075c35f3ff224d155ca5891f3b4325ece933dac",
+    ".github/workflows/check_sphinx_links_scheduled.yml": "68034c5ca9a7beef09b5c4ce364046382e8e546ffa06bbbafbdbbd99d3a157b1"
+  },
+  "generator_sha256": "f238e5d52b0ec5c07f088af203f93698fbdea22a995856dc18c50f5365431353",
+  "schema": "alpha-bridge/fork-ci",
+  "source_branch": "dev",
+  "source_commit": "3ada52e0152847c937e168fd9565d95b37582112",
+  "source_repository": "NeurodataWithoutBorders/nwb-schema",
+  "version": 1,
+  "workflows": [
+    ".github/workflows/alpha-bridge-ci-verify.yml",
+    ".github/workflows/check_sphinx_links_scheduled.yml"
+  ]
+}
