@@ -1,25 +1,25 @@
 {
   "definition_blob_sha1": {
-    ".github/workflows/alpha-bridge-ci-verify.yml": "d19efeb3bd029beb4c50fd874010d2b930d20715",
-    ".github/workflows/audit_disabled_workflows.yml": "eeee2f5228b49bc506ed451eb2e92ff4429a348e",
-    ".github/workflows/check_sphinx_build.yml": "b1b48641c93e9679dd46ae061ef40b756e9d11e5",
-    ".github/workflows/check_sphinx_links.yml": "7b9f4434cfdbe3372b86cbbf3ed769684a59fc1c",
-    ".github/workflows/check_sphinx_links_scheduled.yml": "09de50e437266675e20a569ededf8fa15d6d49fd",
-    ".github/workflows/codespell.yml": "bec41cee2401d0685a33b398a8cdefae82f4f9cf",
-    ".github/workflows/project_action.yml": "80b370adbf1ad3e28e53ab034e3d51b79ff9dacd",
-    ".github/workflows/validate_schema.yml": "f5c56777b9f04f6b5150179319569805000b75da"
+    ".github/workflows/alpha-bridge-ci-verify.yml": "e967624600c97e9308ad7039f50e4e5b3480a77f",
+    ".github/workflows/audit_disabled_workflows.yml": "f76464bf98c07918f57d9a493ab786a5b30b12ba",
+    ".github/workflows/check_sphinx_build.yml": "e98e8eeddfb918162b82bfb7557da7c5a0786dca",
+    ".github/workflows/check_sphinx_links.yml": "483812e6bc146cdf9954d3147b7c16bdbf2823db",
+    ".github/workflows/check_sphinx_links_scheduled.yml": "af0eaa4ab789e3d088d512c1ff8dc9b16add6089",
+    ".github/workflows/codespell.yml": "d82be6060660bd81b3ec8ee598413783b7d601a0",
+    ".github/workflows/project_action.yml": "81e92c099f0721c17de2743e462c0b5fda200706",
+    ".github/workflows/validate_schema.yml": "b3f2038b9c555092f2ec678276d2901f043512b7"
   },
   "definition_sha256": {
-    ".github/workflows/alpha-bridge-ci-verify.yml": "8fde9e2f5e1b37bbbb22794427ac6d217d8b18bc857606edd0b072e89c58b436",
-    ".github/workflows/audit_disabled_workflows.yml": "bf9b88c71aa46e75b8cf05bd97201028b56f11a882c97aa9b87c6994cf96b585",
-    ".github/workflows/check_sphinx_build.yml": "f443ef3b84a3ed0e27b07e5c9c37c16358cd9c2467052856bc251db1f732cbce",
-    ".github/workflows/check_sphinx_links.yml": "c62bc546a46c52d71a57d83229f774bbc05e24bba1a8a0f1706fe81520d583d8",
-    ".github/workflows/check_sphinx_links_scheduled.yml": "9ccbf1c14533a0490ff4cd539dfadcfa117002e4374cb9b8356beb2c677d9237",
-    ".github/workflows/codespell.yml": "3378653feeebed1850fd3f98a0f9f5e250e13682f1fac9e4fe0551eb42be5b6e",
-    ".github/workflows/project_action.yml": "a78d35a6c8e1b882969a0b3611667c744684614c58307c88b10ffcd241a616d9",
-    ".github/workflows/validate_schema.yml": "660006f1e0a72d71dbda664e620258aa1c3933147c88c3400b625ff5fed62f8c"
+    ".github/workflows/alpha-bridge-ci-verify.yml": "148b49359afdc3ab3ecde8d2957b2c4f4fc171da278ede186b799ac544b662f0",
+    ".github/workflows/audit_disabled_workflows.yml": "b283b223ef08d5e2c1e8aff16da2e9f6a826efbb153e5d58b5786eabccfa07e1",
+    ".github/workflows/check_sphinx_build.yml": "380fa3761ce1b5d1573ccc153bd8a562fe55feb3e32843cbe8bf9766afac646e",
+    ".github/workflows/check_sphinx_links.yml": "38505cece518c4c130804ca8cd517fd8f5cc1f6723ab2782340fcbcc661cfe01",
+    ".github/workflows/check_sphinx_links_scheduled.yml": "8e8fbaad5e474e3e641eb9b5cd5c9e79c948438d2ea8195eec26da3e4a3efdff",
+    ".github/workflows/codespell.yml": "2c0efa0bce519b99280ed98c643db04b017f477be7d55aa52e388e81aac887c3",
+    ".github/workflows/project_action.yml": "ab3054f93e3d4521b40798227d75bd862ae2fd9520b86810b8da7d50a91a7eac",
+    ".github/workflows/validate_schema.yml": "19ce0fb9c66bf0c59e986cd0eebeaca898b8287e9e9886d35ad205ed2b07500e"
   },
-  "generator_sha256": "f9d11fba5b604bac754f7ab7e40ccde549adf8e029da2ca91ed14e9ab94c0775",
+  "generator_sha256": "7b3db61baf202e3e7dd48fa25de24a19021fd832011e4b2a2f8fe59420da19d8",
   "schema": "alpha-bridge/fork-ci",
   "source_branch": "dev",
   "source_commit": "3ada52e0152847c937e168fd9565d95b37582112",

@@ -1,7 +1,7 @@
 name: Check Sphinx external links and references (scheduled)
 on:
   schedule:
-  - cron: 0 5 * * *      # once per day at midnight ET
+  - cron: '0 5 * * *'    # once per day at midnight ET
   workflow_dispatch:
 
 jobs:
@@ -9,8 +9,8 @@ jobs:
     uses: ./.github/workflows/check_sphinx_links.yml
     needs:
     - alpha_bridge_inputs
-    if: ${{ (success()) && needs.alpha_bridge_inputs.outputs.changed == 'true' 
-      }}
+    if: |-
+      ${{ (success()) && needs.alpha_bridge_inputs.outputs.changed == 'true' }}
   alpha_bridge_inputs:
     name: CI input check
     runs-on: ubuntu-latest
@@ -36,7 +36,7 @@ jobs:
         AB_REF: ${{ (github.event_name == 'schedule' || github.event_name == 
           'workflow_run') && 'refs/heads/dev' || github.ref }}
         AB_WORKFLOW_DIGEST: 
-          61e29c4bb2527ab41467cc28628d0c500756f39ca11f2a93ecad3ca3a45811bc
+          2497fa355b799d5a272b5621af7752b938de24da084f1b414cf90f423cad51e5
         AB_EVENT: ${{ github.event_name }}
         AB_SCHEDULE: ${{ github.event.schedule || '' }}
         AB_VARIABLES: ${{ toJSON(vars) }}
