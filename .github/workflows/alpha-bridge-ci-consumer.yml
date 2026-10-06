@@ -1,16 +1,18 @@
-name: Check Sphinx external links and references (scheduled)
+name: CI input consumer
 on:
-  schedule:
-  - cron: '0 5 * * *'    # once per day at midnight ET
-  workflow_dispatch:
-
+  workflow_call:
+    inputs:
+      probe:
+        type: string
+        required: true
+      slot:
+        type: string
+        required: true
 jobs:
-  call-linkcheck:
-    uses: ./.github/workflows/crucible-call-check_sphinx_links.yml
-    permissions:
-      contents: read
-      packages: read
-      actions: read
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo 'Changed inputs reached consumer ${{ inputs.slot }}'
     needs:
     - alpha_bridge_inputs
     if: |-
@@ -22,7 +24,7 @@ jobs:
       actions: read
       contents: read
     concurrency:
-      group: alpha-bridge-inputs-32a2712fc6f7c22c-${{ github.workflow }}-${{ 
+      group: alpha-bridge-inputs-04fbff4179fd2373-${{ github.workflow }}-${{ 
         github.sha }}-${{ github.event.schedule || github.event_name }}
       cancel-in-progress: false
       queue: max
@@ -35,13 +37,10 @@ jobs:
         GH_TOKEN: ${{ github.token }}
         AB_REPOSITORY: ${{ github.repository }}
         AB_RUN_ID: ${{ github.run_id }}
-        AB_HEAD_SHA: ${{ (github.event_name == 'schedule' || github.event_name 
-          == 'workflow_run') && '3ada52e0152847c937e168fd9565d95b37582112' || 
-          github.sha }}
-        AB_REF: ${{ (github.event_name == 'schedule' || github.event_name == 
-          'workflow_run') && 'refs/heads/dev' || github.ref }}
+        AB_HEAD_SHA: ${{ github.sha }}
+        AB_REF: ${{ github.ref }}
         AB_WORKFLOW_DIGEST: 
-          41f67f894a9799ed0c1049dc62bdacca6d1907d06a31bc559ccb8e0ab93670cf
+          204202fd1f1fa08793779bf1cda80736b14fcfc47bf1262b68cdcee1a843ad8c
         AB_EVENT: ${{ github.event_name }}
         AB_SCHEDULE: ${{ github.event.schedule || '' }}
         AB_VARIABLES: ${{ toJSON(vars) }}

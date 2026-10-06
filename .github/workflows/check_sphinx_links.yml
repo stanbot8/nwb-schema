@@ -1,7 +1,6 @@
 name: Check Sphinx external links and references
 on:
   pull_request:
-  workflow_call:
   workflow_dispatch:
 
 jobs:
@@ -46,9 +45,10 @@ jobs:
       actions: read
       contents: read
     concurrency:
-      group: alpha-bridge-inputs-${{ github.workflow }}-${{ github.sha }}-${{ 
-        github.event.schedule || github.event_name }}
+      group: alpha-bridge-inputs-c49047ea39477678-${{ github.workflow }}-${{ 
+        github.sha }}-${{ github.event.schedule || github.event_name }}
       cancel-in-progress: false
+      queue: max
     outputs:
       changed: ${{ steps.identity.outputs.changed }}
     steps:
@@ -64,7 +64,7 @@ jobs:
           AB_REF: ${{ (github.event_name == 'schedule' || github.event_name == 
             'workflow_run') && 'refs/heads/dev' || github.ref }}
           AB_WORKFLOW_DIGEST: 
-            0327d54c46297a3280d442bddab9c164b6ce7cfc3bdbc2e77c5ecaeb12093ad0
+            bcfb5df935acf682a3a10e8d582414ad44da004cf42f5e55d99e536d7c5fa73c
           AB_EVENT: ${{ github.event_name }}
           AB_SCHEDULE: ${{ github.event.schedule || '' }}
           AB_VARIABLES: ${{ toJSON(vars) }}
